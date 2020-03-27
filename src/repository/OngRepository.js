@@ -13,6 +13,12 @@ module.exports = {
             meta
         };
     },
+    async byId(id) {
+        return await connection('bth_ong')
+            .select('*')
+            .where('id', id)
+            .first();
+    },
     async byEmail(email) {
         return await connection('bth_ong')
             .select('*')
