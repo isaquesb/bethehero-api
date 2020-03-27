@@ -1,4 +1,16 @@
 ## Be The Hero API
 
-API do Projeto Be The Hero - Semana OhminiStack 11
+Be The Hero project API - OmniStack 11
 
+
+#### Implements
+
+- Express
+- Knex
+- CORS
+- SQLITE3
+- Controllers
+- Repository
+- QueryBuilder Pagination
+- API Resource
+ 

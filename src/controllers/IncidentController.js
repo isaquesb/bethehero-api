@@ -1,12 +1,12 @@
 const repo = require('../repository/IncidentRepository');
-const resource = require('../resource');
-const resultResource = require('../resource/incident');
+const collection = require('../resource/collection');
+const resource = require('../resource/incident');
 
 module.exports = {
     async index(request, response) {
         const {page = 1} = request.query;
         const {data, meta} = await repo.fetch({page});
-        const resultSet = resource(data, resultResource);
+        const resultSet = collection(data, resource);
         response.header('X-Total-Count', meta.total);
         return response.json(resultSet);
     },

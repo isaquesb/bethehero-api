@@ -13,6 +13,12 @@ module.exports = {
             meta
         };
     },
+    async byEmail(email) {
+        return await connection('bth_ong')
+            .select('*')
+            .where('email', email)
+            .first();
+    },
     async store(data) {
         const { name, email, cellphone, city, uf } = data;
         const id = crypto.randomBytes(4).toString('HEX');

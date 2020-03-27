@@ -1,14 +1,14 @@
 {
   "name": "bethehero-api",
   "version": "1.0.0",
-  "description": "Be the Hero - OhmniStack 11 Project",
+  "description": "Be the Hero - OmniStack 11 Project",
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js"
   },
   "keywords": [
     "bethehero",
-    "ohministack11"
+    "omnistack11"
   ],
   "author": "Isaque de Souza <isaquesb@gmail.com>",
   "license": "MIT",
