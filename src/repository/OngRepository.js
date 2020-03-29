@@ -27,7 +27,7 @@ module.exports = {
     },
     async store(data) {
         const { name, email, cellphone, city, uf } = data;
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = this.generateId();
         await connection('bth_ong').insert({
             id,
             name,
@@ -37,5 +37,8 @@ module.exports = {
             uf
         });
         return id;
+    },
+    generateId() {
+        return crypto.randomBytes(4).toString('HEX');
     }
 }
